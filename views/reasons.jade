@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= Title
+
+  form(method='solutions', action='post')
+    select(name='reason')
+      each reason in reasons
+        option(value=reason.id)= reason.name
+      option Add state
+    input(type='hidden', value={stateId}, name='stateId')
