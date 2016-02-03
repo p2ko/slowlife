@@ -1,0 +1,7 @@
+h1= Title
+
+form(method='reasons', action='post')
+  select(name='stateName')
+    each state in states
+      option(value=state.name)= state.name
+    option Add state
